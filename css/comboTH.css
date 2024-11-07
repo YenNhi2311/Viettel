@@ -1,0 +1,1395 @@
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+:root {
+    --bs-danger: #EE0033;
+}
+
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* <!-- Topbar End --> */
+.topbar .d-flex {
+    gap: 20px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.topbar img {
+    margin-right: 15px;
+    /* Khoảng cách giữa logo và địa chỉ */
+}
+
+.topbar .border-end {
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.topbar a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.topbar .dropdown {
+    margin-left: 20px;
+    /* Khoảng cách giữa các nút và dropdown ngôn ngữ */
+}
+
+.topbar .dropdown-menu {
+    margin-top: 5px;
+}
+
+
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+    color: #EE0033
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+    color: #EE0033
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+    color: #EE0033
+}
+
+.btn-md-square {
+    width: 44px;
+    color: #EE0033;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+    color: #EE0033
+}
+
+.btn-xl-square {
+    width: 66px;
+    height: 66px;
+    color: #EE0033
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square,
+.btn-xl-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+
+}
+
+.btn.btn-danger {
+    color: var(--bs-white);
+    border: none;
+}
+
+.btn.btn-danger:hover {
+    background: var(--bs-white);
+    color: var(--bs-dark);
+}
+
+.btn.btn-light {
+    color: var(--bs-danger);
+    border: none;
+}
+
+.btn.btn-light:hover {
+    color: var(--bs-white);
+    background: var(--bs-dark);
+}
+
+.btn.btn-dark {
+    color: var(--bs-white);
+    border: none;
+}
+
+.btn.btn-dark:hover {
+    color: var(--bs-danger);
+    background: var(--bs-light);
+}
+
+
+/*** Topbar Start ***/
+.topbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+    color: var(--bs-danger);
+}
+
+.topbar .dropdown .dropdown-menu a:hover {
+    background: var(--bs-danger);
+    color: var(--bs-white);
+}
+
+.topbar .dropdown .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light);
+    padding-top: 10px;
+    border: 0;
+    transition: .5s;
+    opacity: 1;
+}
+
+/*** Topbar End ***/
+
+
+/*** Navbar Start ***/
+/*** Navbar Start ***/
+.nav-bar {
+    background: var(--bs-white);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: max-height 0.5s ease;
+}
+
+.nav-bar .navbar-light .navbar-brand img {
+    max-height: 50px;
+}
+
+/* Liên kết trong navbar */
+.navbar .navbar-nav .nav-item .nav-link {
+    white-space: nowrap;
+    /* Không ngắt dòng chữ */
+    padding: 0 15px;
+    /* Tăng khoảng cách giữa các liên kết */
+    transition: color 0.3s ease;
+}
+
+/* Định dạng chung cho nav-item */
+.navbar .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Hiệu ứng hover và active */
+.navbar-light .navbar-nav .nav-item:hover,
+.navbar-light .navbar-nav .nav-item.active {
+    color: var(--bs-danger);
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link,
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: var(--bs-danger);
+}
+
+/* Thiết kế cho màn hình nhỏ */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding: 10px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+        background: var(--bs-light);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .navbar .btn {
+        width: 100%;
+        /* Đặt nút chiếm toàn bộ chiều rộng */
+        margin-top: 10px;
+        /* Khoảng cách giữa các nút */
+        text-align: center;
+        /* Căn giữa nội dung */
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px;
+        border: 1px solid var(--bs-danger);
+        color: var(--bs-danger);
+        border-radius: 5px;
+    }
+}
+
+/* Dropdown arrow icon */
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Xóa hoặc vô hiệu hóa */
+.navbar .dropdown-toggle::after {
+    content: none;
+}
+
+/* Vô hiệu hóa mũi tên chỉ cho mục Pages */
+.nav-item.dropdown .dropdown-toggle::after {
+    content: none;
+}
+
+/* Hiệu ứng hover cho dropdown item */
+.dropdown .dropdown-menu .dropdown-item:hover {
+    background: var(--bs-danger);
+    color: var(--bs-white);
+}
+
+/* Thiết kế cho màn hình lớn */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .nav-btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bs-light);
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    .navbar .navbar-nav .nav-btn {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+
+/* Dropdown hiệu ứng */
+.navbar .nav-item .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    /* Điều chỉnh vị trí dropdown */
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    border: none;
+    z-index: 1000;
+    /* Đảm bảo dropdown không đè lên thanh navbar */
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar .dropdown-menu {
+    background-color: var(--bs-light);
+    /* Thêm màu nền cho dropdown */
+}
+
+
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    position: relative;
+    overflow: hidden;
+    background: none;
+    /* Loại bỏ background nếu không cần */
+    padding: 0;
+    /* Loại bỏ padding nếu không cần */
+    transition: 0.5s;
+}
+
+.bg-breadcrumb .breadcrumb {
+    background: none;
+    /* Loại bỏ nền cho breadcrumb */
+    padding: 0;
+    /* Loại bỏ padding nếu không cần */
+    margin: 0;
+    /* Loại bỏ margin nếu không cần */
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+    /* Đặt màu cho liên kết */
+    text-decoration: none;
+    /* Loại bỏ gạch chân khỏi liên kết */
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item.active {
+    color: var(--bs-primary);
+    /* Đặt màu cho phần hiện tại */
+}
+
+.bg-breadcrumb h4 {
+    margin-bottom: 20px;
+    /* Giảm khoảng cách dưới tiêu đề nếu cần */
+}
+
+.breadcrumb-item li {
+    color: #333;
+}
+
+/* Đảm bảo không có hiệu ứng nào khác ảnh hưởng đến breadcrumb */
+
+/*** Single Page Hero Header End ***/
+
+/* Feature Start */
+.feature {
+    padding: 10px 0;
+    /* Thêm khoảng cách trên và dưới của phần 'feature' để tạo không gian thoáng hơn */
+}
+
+.feature .row {
+    display: flex;
+    /* Sử dụng Flexbox để sắp xếp các thành phần con của .row thành hàng ngang/dọc */
+    flex-direction: column;
+    /* Các phần tử con (h1, h5, dropdown) sẽ xếp theo cột dọc, căn giữa dễ hơn */
+    align-items: center;
+    /* Căn giữa các phần tử con theo trục ngang */
+    text-align: center;
+    /* Căn giữa văn bản bên trong các phần tử (h1, h5) */
+    gap: 20px;
+    /* Tạo khoảng cách giữa các thành phần con để tránh chúng dính vào nhau */
+}
+
+.feature .row h1 {
+    font-size: 2.5em;
+    /* Kích thước lớn cho tiêu đề h1 để nó nổi bật */
+    font-weight: bolder;
+    /* Làm tiêu đề đậm hơn để dễ thu hút sự chú ý */
+}
+
+.feature .row h5 {
+    font-size: 1.4em;
+    /* Kích thước vừa phải cho tiêu đề phụ */
+    font-weight: bolder;
+    /* Làm tiêu đề phụ đậm hơn để dễ đọc hơn */
+}
+
+.feature .row-3 {
+    display: flex;
+    /* Sử dụng Flexbox để sắp xếp các dropdown thành hàng ngang */
+    justify-content: center;
+    /* Căn giữa các dropdown trong vùng chứa */
+    flex-wrap: wrap;
+    /* Cho phép các dropdown tự động xuống dòng khi không đủ không gian trên một hàng */
+    gap: 20px;
+    /* Tạo khoảng cách giữa các dropdown để chúng không bị sát nhau */
+    margin-top: 20px;
+    /* Thêm khoảng cách phía trên để tách dropdown khỏi phần tiêu đề */
+}
+
+.feature .row-3 .btn-group {
+    display: flex;
+    /* Sử dụng Flexbox cho từng nhóm nút để có thể căn giữa nội dung */
+    justify-content: center;
+    /* Căn giữa từng dropdown trong nhóm nút */
+    width: auto;
+    /* Loại bỏ việc mở rộng chiều rộng theo mặc định của Flexbox */
+}
+
+.feature .row-3 .btn {
+    background-color: #ffffff;
+    border: 1px solid black;
+    width: 300px;
+    /* Giới hạn chiều rộng của dropdown */
+}
+
+.feature .row-3 .btn-secondary:hover {
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+/* Đảm bảo dropdown có kích thước hợp lý trên các màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .feature .row-3 {
+        flex-direction: column;
+        /* Xếp các dropdown thành cột khi màn hình nhỏ */
+        gap: 15px;
+        /* Giảm khoảng cách giữa các dropdown trên màn hình nhỏ */
+    }
+
+    .feature .row-3 .btn-group {
+        width: 100%;
+        /* Đảm bảo nút chiếm toàn bộ chiều rộng khi trên màn hình nhỏ */
+    }
+
+    .feature .row-3 .btn {
+        width: 100%;
+        /* Đặt chiều rộng của dropdown là 100% để phù hợp với màn hình nhỏ */
+    }
+}
+
+@media (max-width: 768px) {
+    .feature .row-3 {
+        flex-direction: column;
+        /* Khi màn hình nhỏ, xếp các dropdown thành cột dọc để dễ xem */
+        gap: 15px;
+        /* Giảm khoảng cách giữa các dropdown khi màn hình nhỏ để tiết kiệm không gian */
+    }
+
+    .feature .row-3 .btn-group {
+        width: 100%;
+        /* Đảm bảo mỗi dropdown chiếm toàn bộ chiều rộng của màn hình nhỏ */
+        justify-content: center;
+        /* Căn giữa các dropdown khi ở màn hình nhỏ */
+    }
+
+    .feature .row h1 {
+        font-size: 2em;
+        /* Giảm kích thước của tiêu đề h1 trên màn hình nhỏ để tránh chiếm quá nhiều không gian */
+    }
+
+    .feature .row h5 {
+        font-size: 1.2em;
+        /* Giảm kích thước tiêu đề phụ trên màn hình nhỏ để phù hợp với không gian hẹp */
+    }
+}
+
+/* Container chung cho banner */
+.tv-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    position: relative;
+    /* Giúp các nội dung cuộn độc lập nhau */
+    height: 170px;
+    /* Đặt chiều cao cụ thể cho container */
+}
+
+/* Nội dung banner (phần cuộn) */
+.tv-banner-content {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    width: 100%;
+    /* Đảm bảo rằng nội dung nằm trong 100% của container */
+    animation: scroll-left 20s linear infinite;
+    /* Cả hai bắt đầu cùng lúc */
+    top: 0;
+    /* Đặt phần này ở phía trên của container */
+}
+
+.tv-banner-content.reverse {
+    animation: scroll-right 20s linear infinite;
+    /* Chạy ngược chiều nhưng đồng thời */
+    top: 75px;
+    /* Đặt phần này ở phía dưới của container */
+}
+
+/* Đảm bảo kích thước hình ảnh trong banner đều nhau */
+.tv-banner img {
+    width: 150px;
+    /* Chiều rộng cố định cho các ảnh */
+    height: 100px;
+    /* Chiều cao cố định cho các ảnh */
+    object-fit: contain;
+    /* Giữ nguyên tỷ lệ của ảnh, không cắt xén hoặc kéo giãn */
+}
+
+/* Keyframes cho cuộn từ phải sang trái */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Keyframes cho cuộn từ trái sang phải */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+/* CSS cho card sản phẩm hình vuông */
+/* CSS cho card sản phẩm */
+
+/* Custom CSS for swiper buttons */
+
+.combo .row {
+    background-image: url('../img/bg-combo-pack.png');
+    background-color: #f3efef;
+    height: 800px;
+}
+
+.combo .col-6 {
+    width: 750px;
+    margin-left: 150px;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* Đặt nút ở giữa chiều cao của slider */
+    transform: translateY(-50%);
+    /* Căn giữa theo trục Y */
+    z-index: 10;
+    /* Đảm bảo nút luôn nằm trên các phần tử khác */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Nền màu đen mờ */
+    color: #fff;
+    /* Màu mũi tên trắng */
+    border-radius: 50%;
+    /* Bo tròn nút điều hướng */
+}
+
+/* Đặt nút "prev" ra phía bên trái */
+.swiper-button-prev {
+    left: -60px;
+    /* Đẩy nút ra khỏi container về bên trái */
+}
+
+/* Đặt nút "next" ra phía bên phải */
+.swiper-button-next {
+    right: -60px;
+    /* Đẩy nút ra khỏi container về bên phải */
+}
+
+/* Tăng kích thước và làm nổi bật nút khi hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Làm tối hơn nền khi hover */
+    transform: scale(1.1) translateY(-50%);
+    /* Phóng to nút khi hover */
+    cursor: pointer;
+}
+
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Kiểm soát khoảng cách giữa các slide */
+}
+
+.swiper-slide {
+    padding: 0 !important;
+    /* Đảm bảo không có padding giữa các slide */
+    margin: 0 !important;
+    /* Đảm bảo không có margin giữa các slide */
+}
+
+.combo .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 0px;
+    margin: 0;
+    height: 600px;
+    width: 350px;
+    /* Chiều cao cố định để cân đối */
+}
+
+.combo .product-card:hover {
+    transform: translateY(-5px);
+}
+
+.combo .product-card .card-head {
+    background-image: url('../img/img-internet-1.svg');
+    height: 80px;
+    border-radius: 5px 5px;
+    background-size: cover;
+    /* Đảm bảo hình nền bao phủ toàn bộ phần tử */
+    background-position: center;
+    /* Căn giữa hình nền */
+    transition: background-size 0.3s ease-in-out;
+    /* Tạo hiệu ứng chuyển đổi mượt */
+}
+
+.combo .product-card .card-head:hover {
+    background-size: 120%;
+    /* Phóng to hình nền khi hover lên 120% */
+}
+
+.combo .product-card .card-head h3 {
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-weight: bolder;
+}
+
+.combo .product-card .card-body {
+    display: flex;
+    /* Sử dụng Flexbox */
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
+    padding: 10px;
+    /* Khoảng cách bên trong cho card-body */
+}
+
+.combo-it {
+    display: flex;
+    /* Sử dụng Flexbox cho mỗi item */
+    height: 60px;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-bottom: 10px;
+    /* Khoảng cách giữa các item */
+}
+
+.combo-it .img {
+    width: 50px;
+    /* Chiều rộng của hình ảnh */
+    margin-right: 10px;
+    /* Khoảng cách giữa hình ảnh và chữ */
+}
+
+.combo-it img {
+    width: 60%;
+    /* Kích thước hình ảnh chiếm toàn bộ chiều rộng */
+    height: auto;
+    /* Giữ tỷ lệ hình ảnh */
+}
+
+.combo-it span {
+    font-size: 1em;
+    /* Kích thước chữ */
+    font-weight: bold;
+    /* Độ đậm chữ */
+    max-width: 280px;
+    /* Đặt chiều rộng tối đa (có thể điều chỉnh theo nhu cầu) */
+    white-space: nowrap;
+    /* Không cho chữ xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần chữ bị tràn ra ngoài */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ... nếu chữ bị cắt */
+
+}
+
+.combo .card-body h4 {
+    font-size: 2em;
+    font-weight: bolder;
+
+}
+
+.combo .card-body h4:hover {
+    font-size: 2em;
+    color: #EE0033;
+    font-weight: bolder;
+
+}
+
+.combo .card-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.combo .card-footer .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px 5px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    /* Đảm bảo thanh màu chạy trong button */
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.combo .card-footer .btn-success {
+    background-color: #EE0033;
+    width: 200px;
+}
+
+.combo .card-footer .btn-primary {
+    background-color: #666;
+    width: 200px;
+}
+
+/* Hover Effect */
+.combo .card-footer .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Màu thanh khi hover */
+    transition: left 0.4s ease;
+    /* Chuyển động mượt */
+}
+
+.combo .card-footer .button:hover::before {
+    left: 0;
+    /* Di chuyển thanh từ trái sang phải */
+}
+
+.combo .card-footer .button:hover {
+    background-color: darken(#851f25, 10%);
+    /* Tăng độ tối của background khi hover */
+}
+
+/* Custom Hover Colors for Each Button */
+.combo .card-footer .btn-success:hover {
+    background-color: #e84850;
+    /* Màu nền khi hover cho nút Đăng Ký */
+}
+
+.combo .card-footer .btn-primary:hover {
+    background-color: #acb1b6;
+    /* Màu nền khi hover cho nút Xem chi tiết */
+}
+
+
+/* <!-- Combo Internet – Camera --> */
+.combo1 {
+    margin-bottom: 30px;
+
+}
+.combo1 .row{
+    margin-left: 70px;
+}
+
+.combo1 .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Kiểm soát khoảng cách giữa các slide */
+}
+
+.combo1 .swiper-slide {
+    padding: 0 !important;
+    /* Đảm bảo không có padding giữa các slide */
+    margin: 0 !important;
+    /* Đảm bảo không có margin giữa các slide */
+}
+
+.combo1 .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 0px;
+    margin: 0;
+    height: 630px;
+    width: 350px;
+    /* Chiều cao cố định để cân đối */
+}
+
+.combo1 .product-card:hover {
+    transform: translateY(-5px);
+}
+
+.combo1 .product-card .card-head {
+    background-image: url('../img/img-internet-1.svg');
+    height: 80px;
+    border-radius: 5px 5px;
+    background-size: cover;
+    /* Đảm bảo hình nền bao phủ toàn bộ phần tử */
+    background-position: center;
+    /* Căn giữa hình nền */
+    transition: background-size 0.3s ease-in-out;
+    /* Tạo hiệu ứng chuyển đổi mượt */
+}
+
+.combo1 .product-card .card-head:hover {
+    background-size: 120%;
+    /* Phóng to hình nền khi hover lên 120% */
+}
+
+.combo1 .product-card .card-head h3 {
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-weight: bolder;
+}
+
+.combo1 .product-card .card-body {
+    display: flex;
+    /* Sử dụng Flexbox */
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
+    padding: 10px;
+    /* Khoảng cách bên trong cho card-body */
+}
+
+.combo1 .card-body .combo-it {
+    display: flex;
+    /* Sử dụng Flexbox cho mỗi item */
+    height: 60px;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-bottom: 10px;
+    /* Khoảng cách giữa các item */
+}
+
+.combo1 .card-body .combo-it .img {
+    width: 50px;
+    /* Chiều rộng của hình ảnh */
+    margin-right: 10px;
+    /* Khoảng cách giữa hình ảnh và chữ */
+}
+
+.combo1 .card-body .combo-it img {
+    width: 60%;
+    /* Kích thước hình ảnh chiếm toàn bộ chiều rộng */
+    height: auto;
+    /* Giữ tỷ lệ hình ảnh */
+}
+
+.combo1 .card-body .combo-it span {
+    font-size: 1em;
+    /* Kích thước chữ */
+    font-weight: bold;
+    /* Độ đậm chữ */
+    max-width: 280px;
+    /* Đặt chiều rộng tối đa (có thể điều chỉnh theo nhu cầu) */
+    white-space: nowrap;
+    /* Không cho chữ xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần chữ bị tràn ra ngoài */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ... nếu chữ bị cắt */
+
+}
+
+.combo1 .card-body h4 {
+    font-size: 2em;
+    font-weight: bolder;
+
+}
+
+.combo1 .card-body h4:hover {
+    font-size: 2em;
+    color: #EE0033;
+    font-weight: bolder;
+
+}
+
+.combo1 .card-footer {
+    text-align: center;
+}
+
+.combo1 .card-footer .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px 5px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    /* Đảm bảo thanh màu chạy trong button */
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.combo1 .card-footer .btn-success {
+    background-color: #EE0033;
+    width: 200px;
+}
+
+.combo1 .card-footer .btn-primary {
+    background-color: #666;
+    width: 200px;
+}
+
+/* Hover Effect */
+.combo1 .card-footer .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Màu thanh khi hover */
+    transition: left 0.4s ease;
+    /* Chuyển động mượt */
+}
+
+.combo1 .card-footer .button:hover::before {
+    left: 0;
+    /* Di chuyển thanh từ trái sang phải */
+}
+
+.combo1 .card-footer .button:hover {
+    background-color: darken(#851f25, 10%);
+    /* Tăng độ tối của background khi hover */
+}
+
+/* Custom Hover Colors for Each Button */
+.combo1 .card-footer .btn-success:hover {
+    background-color: #e84850;
+    /* Màu nền khi hover cho nút Đăng Ký */
+}
+
+.combo1 .card-footer .btn-primary:hover {
+    background-color: #acb1b6;
+    /* Màu nền khi hover cho nút Xem chi tiết */
+}
+.item-combo {
+    display: flex;            /* Sử dụng Flexbox để sắp xếp các phần tử */
+    justify-content: space-between; /* Căn giữa hoặc phân bổ không gian giữa các phần tử */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    flex-wrap: wrap;         /* Cho phép các phần tử xuống dòng nếu không đủ không gian */
+}
+.item1 {
+    margin: 5px;    
+    width: 50px;         /* Khoảng cách giữa các hình ảnh */
+}
+.combo1 .item-combo img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Styles cho testimonial3 */
+
+/* CSS cho banner */
+.banner-section {
+    background-image: url('../img/bg-it-support.png');
+    /* Đường dẫn đến hình nền */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    position: relative;
+    color: #fff;
+    /* Màu trắng cho chữ trên nền tối */
+}
+
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.banner-subtitle {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: #eee;
+}
+
+.banner-buttons .banner-btn {
+    margin-right: 15px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #c1012a;
+    /* Màu xám mờ */
+    font-size: 1rem;
+    border: 2px solid #ee0033;
+    color: #eee;
+    /* Viền màu đỏ đậm */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-buttons .banner-btn:hover {
+    background-color: #ee0033;
+    color: #eee;
+    /* transform: translateY(-3px); */
+}
+
+/* sp THÊM */
+
+/* CSS cho card sản phẩm hình vuông */
+/* CSS cho card sản phẩm */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    height: 300px;
+    /* Chiều cao cố định để cân đối */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng card */
+    height: 150px;
+    /* Chiều cao cố định để tất cả các hình đều giống nhau */
+    object-fit: contain;
+    /* Giữ nguyên tỷ lệ hình ảnh mà không làm méo */
+    margin: 0 auto;
+    /* Căn giữa hình ảnh */
+    display: block;
+    /* Để margin: auto hoạt động */
+}
+
+.product-card .card-body {
+    padding: 10px;
+    /* Giảm padding trong card-body */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-card h4 {
+    font-size: 1.0rem;
+    /* Giảm kích thước chữ cho tiêu đề */
+    font-weight: 600;
+    margin-top: 5px;
+    /* Giảm khoảng cách trên */
+    color: #333;
+}
+
+.product-card h2 {
+    font-size: 2.0rem;
+    /* Giảm kích thước chữ cho mô tả */
+    color: #333;
+    font-weight: bolder;
+}
+
+
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 100px;
+    }
+
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
+
+
+/* Tạo hiệu ứng cuộn ngang cho carousel */
+.carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    min-width: 300px;
+    /* Đảm bảo rằng mỗi sản phẩm có kích thước tối thiểu */
+    scroll-snap-align: start;
+}
+
+.carousel-inner::-webkit-scrollbar {
+    display: none;
+    /* Ẩn thanh cuộn */
+}
+
+/* Điều chỉnh cho màn hình nhỏ (mobile) */
+@media (max-width: 768px) {
+    .col-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
+
+/* Điều chỉnh giao diện trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .testimonial-2 .package-card {
+        margin-bottom: 20px;
+        /* Thêm khoảng cách giữa các thẻ card trên màn hình nhỏ */
+    }
+
+    /* Canh giữa mỗi card khi ở giao diện mobile */
+    .testimonial-2 .col-sm-12 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .banner-buttons .banner-btn {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Điều chỉnh giao diện trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .testimonial-2 .row {
+        margin-left: 0;
+    }
+
+    .testimonial-2 .col-3 {
+        width: 100%;
+        /* Chiếm toàn bộ chiều ngang trên màn hình nhỏ */
+        margin-bottom: 20px;
+        /* Thêm khoảng cách giữa các thẻ card */
+    }
+
+    .testimonial-2 .package-title {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-2 .package-price1 {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-2 .btn-primary,
+    .testimonial-2 .btn-success {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
+
+/*** Contact Start ***/
+.contact .contact-img {
+    position: relative;
+}
+
+.contact .contact-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    animation-name: image-efects;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 0.5s
+}
+
+@keyframes image-efects {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    25% {
+        border-radius: 35% 65% 27% 73% / 71% 25% 75% 29%;
+    }
+
+    50% {
+        border-radius: 41% 59% 45% 55% / 32% 21% 79% 68%;
+    }
+
+    75% {
+        border-radius: 69% 31% 39% 61% / 70% 83% 17% 30%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.contact .contact-img .contact-img-inner {
+    position: relative;
+    z-index: 9;
+}
+
+/*** Contact End ***/
+
+
+/*** Footer Start ***/
+.footer {
+    background: #BBBBBB;
+}
+
+.footer .footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-item a {
+    line-height: 35px;
+    color: var(--bs-body);
+    transition: 0.5s;
+}
+
+.footer .footer-item p {
+    line-height: 35px;
+}
+
+.footer .footer-item a:hover {
+    color: var(--bs-danger);
+}
+
+.footer .footer-item .footer-btn a,
+.footer .footer-item .footer-btn a i {
+    transition: 0.5s;
+}
+
+.footer .footer-item .footer-btn a:hover {
+    background: var(--bs-white);
+}
+
+.footer .footer-item .footer-btn a:hover i {
+    color: var(--bs-danger);
+}
+
+
+.footer .footer-item .footer-instagram {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .footer-item .footer-instagram img {
+    transition: 0.5s;
+}
+
+.footer .footer-item .footer-instagram:hover img {
+    transform: scale(1.2);
+}
+
+.footer .footer-item .footer-instagram .footer-search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.footer .footer-item .footer-instagram:hover .footer-search-icon {
+    opacity: 1;
+    background: rgba(0, 0, 0, .6);
+}
+
+.footer .footer-item .footer-btn a {
+    background: var(--bs-light);
+    color: var(--bs-danger);
+}
+
+.footer .footer-item .footer-btn a:hover {
+    background: var(--bs-danger);
+}
+
+.footer .footer-item .footer-btn a:hover i {
+    color: var(--bs-white);
+}
+
+/*** Footer End ***/
+
+
+/*** copyright Start ***/
+/* .copyright {
+    background: var(--bs-dark);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+} */
+
+/*** copyright end ***/
